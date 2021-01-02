@@ -1,0 +1,2 @@
+board_width 70
+board_length 35
