@@ -21,12 +21,11 @@ Game board or boundary is modifiable from the `config.txt` file. Below are the t
 
 ## Instructions to run
 1. Navigate to project directory and run `mkdir build && cd build` on terminal.
-2. Run `cmake ..`
-3. Run `make`. This will generate an executable inside `build` folder named `PassTheBlocks`
-4. Run `./PassTheBlocks`
-5. A display will appear as below
+2. Run `cmake .. && make`. This will generate an executable inside `build` folder named `PassTheBlocks`
+3. Run `./PassTheBlocks`
+4. A display will appear as below
     <img src="images/opening_screen.png" alt="drawing" />
-6. Press 'S' (not case-sensitive) to get in action or any key to terminate the program.    
+5. Press 'S' (not case-sensitive) to get in action or any key to terminate the program.    
 
 ## Note
 Once there's a collision everything halts. Please press any of the `Arrow Keys` to get to the next screen.
