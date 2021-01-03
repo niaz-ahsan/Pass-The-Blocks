@@ -1,7 +1,7 @@
 # Pass The Blocks
 A fun 2D terminal game built with C++.
 
-<img src="images/Pass_The_Blocks.gif" alt="drawing" />
+<img src="images/PTB-in-action.gif" alt="In Action" />
 
 ## Description
 The game is basically all about ducking the incoming blocks or obstacles. The player (indicated by '*') is spawned at the bottom of the playground or board. Obstacles would generate on top of the board and would start to come down to hit the player. Each obstacle would have some gaps. Player would have to take advantage of the gaps by pressing the `Arrow Keys` and duck the obstacles.
