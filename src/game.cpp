@@ -3,6 +3,7 @@
 #include <game.h>
 #include <curses.h>
 #include <pthread.h>
+#include <cstdlib>
 
 /*
 Board value:
@@ -170,13 +171,17 @@ void Game::generate_obstacle() {
 int Game::get_gap_index() {
     int mid = _col/2;
     int index;
-
+    
     if(score % 2 == 0) {
-        index = mid / 2;
+        // generate gap on left side
+        srand(time(0));
+        index = rand() % mid;
     } else {
-        index = ((mid + _col) - get_obstacle_gap()) / 2;
+        // gap on right side
+        // start from mid point to (_col - # of gap)
+        srand(mid);
+        index =  rand() % (_col - get_obstacle_gap()) ;
     }
-
     return index;
 }
 
