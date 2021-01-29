@@ -32,6 +32,7 @@ private:
     bool vehicle_created = false; // obstacle generation should wait until player/vehicle is created... this var controls that
     void move_my_vehicle(std::promise<void>&&);
     void generate_obstacle();
+    int get_gap_index();
     void change_inner_board_value(int, int, int);
     int get_inner_board_cell(int, int);
     void post_game_over();

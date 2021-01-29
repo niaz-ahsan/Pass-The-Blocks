@@ -131,7 +131,7 @@ void Game::generate_obstacle() {
     }
 
     while(game_should_go_on) {
-        int bound = rand() % (_col/2 + 3) + 1;
+        int bound = get_gap_index();
         int row = 0;
 
         std::vector<int> cols;
@@ -165,6 +165,19 @@ void Game::generate_obstacle() {
         score++; // each obstacle goes out of the board, score increases.
     }
     //sender.set_value();    
+}
+
+int Game::get_gap_index() {
+    int mid = _col/2;
+    int index;
+
+    if(score % 2 == 0) {
+        index = mid / 2;
+    } else {
+        index = ((mid + _col) - get_obstacle_gap()) / 2;
+    }
+
+    return index;
 }
 
 bool Game::check_collision_from_obstacle(int row, int col) {
